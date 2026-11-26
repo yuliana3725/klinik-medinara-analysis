@@ -78,7 +78,7 @@ Jalankan berurutan:
 
 ## Cara Menjalankan Ulang
 
-**Kebutuhan:** PostgreSQL 14 dan pgAdmin 4. Untuk notebook: Python 3 atau Google Colab.
+**Kebutuhan:** PostgreSQL 18 dan pgAdmin 4. Untuk notebook: Python 3 atau Google Colab.
 
 1. Buat database kosong bernama `klinik_medinara`.
 2. Siapkan lima file CSV (`doctors`, `patients`, `appointments`, `diagnoses`, `prescriptions`) di komputermu, misalnya di folder `data/raw/`.
