@@ -17,6 +17,12 @@ Rata-rata kunjungan per bulan naik dari **44,0** (2022) menjadi **93,5** (2023) 
 
 Rata-rata revenue per kunjungan hampir tidak berubah, yaitu sekitar Rp 184 ribu (Rp 183.601 sampai Rp 188.239 pada 2022 sampai 2024). Artinya pertumbuhan revenue **hampir seluruhnya berasal dari bertambahnya jumlah kunjungan**, bukan dari kenaikan tarif.
 
+![Tren kunjungan selesai per bulan](figures/01_tren_kunjungan.png)
+
+![Rata-rata kunjungan per bulan, per tahun](figures/03_rata_kunjungan_per_tahun.png)
+
+*Catatan grafik: batang 2021 (7 bulan) dan 2025 (1 bulan) berwarna lebih muda karena tahun parsial, jadi tidak dibandingkan dengan tahun penuh.*
+
 **Implikasi:** klinik berkembang karena volume pasien, sehingga kapasitas dokter dan jadwal layak dipantau agar tidak menjadi kendala.
 
 **Batasan:** 2021 hanya 7 bulan dan 2025 hanya 1 bulan, jadi keduanya tidak dipakai dalam perbandingan tahunan.
@@ -26,6 +32,10 @@ Rata-rata revenue per kunjungan hampir tidak berubah, yaitu sekitar Rp 184 ribu 
 Laju pertumbuhan kunjungan rata-rata per bulan turun dari **7,2%** (2022) menjadi **5,2%** (2023) dan **2,8%** (2024). Pertumbuhan year-over-year pada pertengahan 2024 masih sekitar 107% sampai 115% (Mei sampai Juli), lalu turun menjadi 24,1% pada November 2024, 68,4% pada Desember 2024, dan 13,6% pada Januari 2025.
 
 Kunjungan per bulan pada Juli sampai Desember 2024 bergerak di kisaran 165 sampai 197, sehingga kurvanya cenderung **mendatar sejak pertengahan 2024**.
+
+![Pertumbuhan year-over-year](figures/04_pertumbuhan_yoy.png)
+
+*Catatan grafik: Juni 2022 tidak ditampilkan karena pembandingnya, Juni 2021, hanya terisi sebagian bulan.*
 
 **Implikasi:** pertumbuhan belum berhenti, tetapi tidak lagi secepat dua tahun sebelumnya. Perlu dipantau apakah tren mendatar ini berlanjut pada 2025.
 
@@ -38,6 +48,8 @@ Kunjungan per bulan pada Juli sampai Desember 2024 bergerak di kisaran 165 sampa
 
 Selisih revenue kedua bulan itu hanya Rp 370.000 (sekitar 1%). Lima bulan teratas menurut kedua ukuran semuanya jatuh di **2024**.
 
+![Revenue nominal per bulan](figures/02_revenue_bulanan.png)
+
 **Implikasi:** tidak ada satu musim puncak yang jelas. Bulan-bulan tertinggi berkumpul di 2024 karena tren naik, bukan karena pola musiman tertentu.
 
 **Batasan:** karena tren naik kuat, bulan-bulan terbaru hampir selalu menjadi yang tertinggi. Dengan data ini, musiman sejati tidak bisa dipisahkan dari tren pertumbuhan.
@@ -47,6 +59,10 @@ Selisih revenue kedua bulan itu hanya Rp 370.000 (sekitar 1%). Lima bulan terata
 Menurut hari, kunjungan tertinggi pada **Minggu (15,7%)** dan terendah pada **Selasa (13,4%)**, selisih 2,3 poin persentase. Menurut jam, sebarannya berkisar dari **10,4%** (pukul 12.00) sampai **11,7%** (pukul 15.00).
 
 Uji chi-square tidak menemukan perbedaan yang signifikan, baik untuk hari (p = 0,108) maupun jam (p = 0,830), dengan ukuran efek sangat kecil (Cramér's V masing-masing 0,021 dan 0,012).
+
+![Kunjungan menurut hari dan jam](figures/05_heatmap_hari_jam.png)
+
+Peta panas memperlihatkan selisih antar sel (46 sampai 80 kunjungan), tetapi tiap sel hanya berisi rata-rata sekitar 63 kunjungan, sehingga angkanya mudah bergeser karena kebetulan dan tidak membentuk pola yang konsisten.
 
 **Implikasi:** tidak ada dasar statistik untuk mengubah jadwal dokter atau jam praktik berdasarkan hari atau jam tertentu.
 
@@ -73,7 +89,8 @@ Sebanyak 20% appointment tidak selesai (batal, no-show, dijadwal ulang). Dari ta
 | Rata-rata per bulan, per tahun | Q2 (`03_visit_revenue_trend.sql`), atau dihitung dari `monthly_trend.csv` |
 | Revenue per kunjungan per tahun | Total revenue dibagi total kunjungan per tahun, dari `monthly_trend.csv` |
 | Year-over-year | Q5 |
-| Laju pertumbuhan per bulan | Notebook `01_trend_analysis.ipynb`, bagian 7 (regresi pada log kunjungan) |
+| Laju pertumbuhan per bulan | Notebook `01_trend_analysis_colab.ipynb`, bagian 7 (regresi pada log kunjungan) |
 | Bulan puncak | Q3 |
 | Persentase per hari dan jam | Q6 dan Q7 |
-| Uji chi-square | Notebook `01_trend_analysis.ipynb`, bagian 10 |
+| Uji chi-square | Notebook `01_trend_analysis_colab.ipynb`, bagian 10 |
+| Semua grafik | Notebook `01_trend_analysis_colab.ipynb`, disimpan di `reports/figures/` |
